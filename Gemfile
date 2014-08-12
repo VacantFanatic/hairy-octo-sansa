@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#datasift gem for accessing stream functions
+gem 'datasift'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -24,10 +26,21 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+
+group :development, :test do
+  gem "capybara"
+  gem "database_cleaner"
+  gem "spork"
+  gem "launchy"
+  gem 'spring'
+  gem "cucumber-rails", require:false
+  gem "rspec-rails"
+  gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
+end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'

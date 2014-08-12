@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @data_stream.name %>
+</p>
+
+<p>
+  <strong>Csdl:</strong>
+  <%= @data_stream.csdl %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @data_stream.active %>
+</p>
+
+<%= link_to 'Edit', edit_data_stream_path(@data_stream) %> |
+<%= link_to 'Back', data_streams_path %>

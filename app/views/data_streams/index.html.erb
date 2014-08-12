@@ -1,0 +1,29 @@
+<h1>Listing data_streams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Csdl</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_streams.each do |data_stream| %>
+      <tr>
+        <td><%= data_stream.name %></td>
+        <td><%= data_stream.csdl %></td>
+        <td><%= data_stream.active %></td>
+        <td><%= link_to 'Show', data_stream %></td>
+        <td><%= link_to 'Edit', edit_data_stream_path(data_stream) %></td>
+        <td><%= link_to 'Destroy', data_stream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data stream', new_data_stream_path %>
